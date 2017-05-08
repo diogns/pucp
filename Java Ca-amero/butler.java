@@ -54,6 +54,10 @@ public class Holamundojava {
                 c[i]=b[cont2];
                 cont2++;
             }
+            else {
+                c[i]=a[cont];
+                cont++;
+            }
         }
     }
 }
