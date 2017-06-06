@@ -1,0 +1,30 @@
+package fibonacci;
+import javax.swing.*;
+
+
+/**
+ *
+ * @author HOLA JHAMPIERRE
+ */
+public class Fibonacci {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      int n=Integer.parseInt(JOptionPane.showInputDialog("Digite el lugar en la serie de Fibonacci"));
+      
+      JOptionPane.showMessageDialog(null, "El numero en la posicion "+n+" es "+Fib(n));
+      
+    }
+    public static int Fib(int x)
+        {int a=1,b=1,c=0,cont=2;
+        while(x!=0)
+            {c=a+b;
+            a=b;
+            b=c;
+            cont++;
+            if(cont==x)
+                break;}
+        return c;}
+}
