@@ -1,4 +1,4 @@
-# pucp
+# Programacion en general
 #Colaboradore: Jorge,Jampierre.
-#Descripcion:Programa de reconocimiento de imagenes.
+#Descripcion:Un repositorio FIEE UNI 2016-I.
 
