@@ -1,0 +1,119 @@
+public class Test {
+    
+    public static void main (String[] args){
+        
+        Alumno a = new Alumno (72845755,"Gustavo",48875,"futbol");
+        Docente b = new Docente(784585,"Cañamero",487865,"FIEE");
+        
+        System.out.println(a.getDeporte());
+        System.out.println(b.getFacultad());
+        System.out.println(a.getNombre());
+        a.setDeporte("voley");
+        b.setFacultad("FAUA");
+        System.out.println(a.getDeporte());
+        b.imprimir();
+        System.out.println(a.moverse());
+    }
+}
+
+public class Persona {
+
+    private int dni;
+    private String nombre;
+    private int telefono;
+    
+    public Persona(){    
+    }
+    public Persona(int d , String nom , int telf){
+        dni = d;
+        nombre = nom;
+        telefono = telf;
+    }
+    public String moverse(){
+        return "La persona " + nombre + " se esta moviendo";
+    }
+    public String hablar(){
+        return "La persona " + nombre + " esta hablando ";
+    }
+    public void imprimir(){
+        System.out.println("El dni es : " + dni + "\nEl nombre es" + nombre + "\nEl telefono es");
+        
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public void setNombre( String nom){
+        nombre = nom;
+    }
+    public int getDNI(){
+        return dni;
+    }
+    public void setDNI(int d){
+        dni = d;
+    }
+    public int getTelefono(){
+        return telefono;
+    }
+    public void setTelefono(int telf){
+        telefono = telf;
+    }
+}
+
+public class Alumno extends Persona{
+    
+    private String deporte;
+    
+    public Alumno(int d , String nom , int telf , String depor){
+        setDNI(d);
+        setNombre(nom);
+        setTelefono(telf);
+        deporte = depor;
+    }
+    public String moverse(){
+        return "El alumno " +getNombre()+" toma asiento para escuchar la clase";
+    }
+    public String practica_deporte(){
+        return "El alumno practica"+deporte;
+    }
+    public void imprimir(){
+        
+        System.out.println("Practica : " +deporte);
+    }
+    public String getDeporte(){
+        return deporte;
+    }
+    public void setDeporte( String depor) {
+        deporte = depor;
+        
+    }
+    
+    
+}public class Docente extends Persona {
+    
+    private String facultad;
+    
+    public Docente(int d , String nom , int telf , String facu){
+        setDNI(d);
+        setNombre(nom);
+        setTelefono(telf);
+        facultad = facu;
+    }
+    public String hablar(){
+        return "dicta clase de Computacion";
+    }
+    public String pertenece(){
+        return "Enseña en " + facultad;
+    }
+    @Override
+    public void imprimir(){
+        
+        System.out.println("Enseña en " +facultad);
+    }
+    public String getFacultad(){
+        return facultad;
+    }
+     public void setFacultad( String facu) {
+        facultad = facu;
+        
+    }
+}
